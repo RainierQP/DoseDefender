@@ -96,6 +96,7 @@ function updateBackground(){
     var rotation = "hue-rotate("+q+"deg)";
     //document.getElementById("label-background").style.filter = "hue-rotate(40deg)";
     document.getElementById("label-background").style.filter = rotation;
+    document.getElementById("label-print").style.display = "block"
 	
 }
 
@@ -147,7 +148,7 @@ Side effects: <input type="text" id="sideEffects" value=""> <br>
 
 <button onclick="updatePrint()">Print The Label</button>
 
-<div class="container">
+<div hidden id="label-print" class="container">
   <img id="label-background" src="" width="550" height="500">
   <div class="content">
     <h3>Yeehaw Phamacy </h3>
