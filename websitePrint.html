@@ -61,7 +61,12 @@ function updateBackground(){
         	break;
         default:
         	
-    }
+    };
+    var q = document.getElementById("quantity").value;
+    q = q*2;
+    var rotation = "hue-rotate("+q+"deg)";
+    //document.getElementById("label-background").style.filter = "hue-rotate(40deg)";
+    document.getElementById("label-background").style.filter = rotation;
 	
 }
 
@@ -143,6 +148,7 @@ Expiration Date: <input type="text" id="expDate" value="">
 
 
 <img id="label-background" src="" width="550" height="500">
+<img id="fuckMe" src="pineapple.jpg" width="300" height="300" style="filter: hue-rotate(90deg);">
 
 
 </body>
