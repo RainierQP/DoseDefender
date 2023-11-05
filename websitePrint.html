@@ -60,19 +60,19 @@ function updateTimeBetweenDoses(){
 
 function updateMethod(){
 	var methodlist = document.getElementById("methodList");
-  document.getElementById("methodPrint").innerHTML = methodlist.options[methodlist.selectedIndex].text;
+  document.getElementById("methodPrint").innerHTML = "Special note: " +  methodlist.options[methodlist.selectedIndex].text;
 }
 
 function updateQuantity(){
-	document.getElementById("quantityPrint").innerHTML = document.getElementById("quantity").value;
+	document.getElementById("quantityPrint").innerHTML = "Quanitity: " +  document.getElementById("quantity").value;
 }
 
 function updateDoctorName(){
-	document.getElementById("doctorNamePrint").innerHTML = document.getElementById("doctorName").value;
+	document.getElementById("doctorNamePrint").innerHTML = "Perscribed by: " +  document.getElementById("doctorName").value;
 }
 
 function updateExpDate(){
-	document.getElementById("expDatePrint").innerHTML = document.getElementById("expDate").value;
+	document.getElementById("expDatePrint").innerHTML = "Expires: " +  document.getElementById("expDate").value;
 }
 
 function updateBackground(){
@@ -126,10 +126,10 @@ Perscription Number: <input type="text" id="RxNumber" value=""> <br>
 #Doses per day: <input type="text" id="timeBetweenDoses" value=""> <br>
 Number of days: <input type="text" id="numDays" value=""> <br>
 <form>
-  Method:
+  Special note:
   <select id="methodList">
-    <option></option>
-    <option>With food</option>  
+    <option>None</option>
+    <option>Take with food</option>  
   </select>
 </form>
 Quantity: <input type="text" id="quantity" value=""> <br>
