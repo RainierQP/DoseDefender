@@ -10,23 +10,70 @@ function updateLastName() {
   document.getElementById("lastNamePrint").innerHTML = document.getElementById("lastName").value;
 }
 
+function updateRxNumber() {
+  document.getElementById("RxNumberPrint").innerHTML = document.getElementById("RxNumber").value;
+}
+
+function updatePAddress() {
+  document.getElementById("pAddressPrint").innerHTML = document.getElementById("pAddress").value;
+}
+
 function updateDrug() {
   var druglist = document.getElementById("drugList");
   document.getElementById("drugPrint").innerHTML = druglist.options[druglist.selectedIndex].text;
 }
 
+function updateTimeBetweenDoses(){
+	document.getElementById("timeBetweenDosesPrint").innerHTML = document.getElementById("timeBetweenDoses").value;
+}
+
+function updateNumDays(){
+	document.getElementById("numDaysPrint").innerHTML = document.getElementById("numDays").value;
+}
+
+function updateMethod(){
+	var methodlist = document.getElementById("methodList");
+  document.getElementById("methodPrint").innerHTML = methodlist.options[methodlist.selectedIndex].text;
+}
+
+function updateQuantity(){
+	document.getElementById("quantityPrint").innerHTML = document.getElementById("quantity").value;
+}
+
+function updateDoctorName(){
+	document.getElementById("doctorNamePrint").innerHTML = document.getElementById("doctorName").value;
+}
+
+function updateExpDate(){
+	document.getElementById("expDatePrint").innerHTML = document.getElementById("expDate").value;
+}
+
+
 function updatePrint() {
   updateFirstName();
   updateLastName();
   updateDrug();
+  updateRxNumber();
+  updatePAddress();
+  updateTimeBetweenDoses();
+  updateNumDays();
+  updateMethod();
+  updateQuantity();
+  updateDoctorName();
+  updateExpDate();
 }
 </script>
 </head>
 <body>
 
 First Name: <input type="text" id="firstName" value="">
+<p></p>
 Last Name: <input type="text" id="lastName" value="">
-
+<p></p>
+Patient Address: <input type="text" id="pAddress" value="">
+<p></p>
+Perscription Number: <input type="text" id="RxNumber" value="">
+<p></p>
 <form>
   Medicine:
   <select id="drugList">
@@ -34,14 +81,47 @@ Last Name: <input type="text" id="lastName" value="">
     <option>Ibuprofen</option>  
   </select>
 </form>
+<p></p>
+Time between doses: <input type="text" id="timeBetweenDoses" value="">
+<p></p>
+Number of days: <input type="text" id="numDays" value="">
+<p></p>
+<form>
+  Method:
+  <select id="methodList">
+    <option></option>
+    <option>With food</option>  
+  </select>
+</form>
+<p></p>
+<p></p>
+Quantity: <input type="text" id="quantity" value="">
+<p></p>
+Doctor: <input type="text" id="doctorName" value="">
+<p></p>
+Expiration Date: <input type="text" id="expDate" value="">
+<p></p>
 
-<p>Click the button to display the value of the value attribute of the text field.</p>
+<p></p>
 
 <button onclick="updatePrint()">Print The Label</button>
 
+<p>Yeehaw Phamacy </p>
+<p>12345 Main Street, Dallas TX</p>
+
+<p id = "RxNumberPrint">#</p>
+
 <p id="firstNamePrint">c</p>
 <p id="lastNamePrint">v</p>
+<p id = "pAddressPrint"></p>
 <p id="drugPrint">abcasdfgjk</p>
+<p id="timeBetweenDosesPrint"></p>
+<p id="numDaysPrint"></p>
+<p id="methodPrint"></p>
+<p id="quantityPrint"></p>
+<p id="doctorNamePrint"></p>
+<p id="expDatePrint"></p>
+<p id="sideEffectsPrint">Side effects may include:</p>
 
 
 
