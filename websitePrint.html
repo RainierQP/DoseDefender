@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function updateFirstName() {
+  document.getElementById("firstNamePrint").innerHTML = document.getElementById("firstName").value;
+}
+
+function updateLastName() {
+  document.getElementById("lastNamePrint").innerHTML = document.getElementById("lastName").value;
+}
+
+function updateDrug() {
+  var drugList = document.getElementById("drugList");
+  document.getElementById("drugPrint").value = drugList.options[drugList.selectedIndex].text;
+}
+
+function updatePrint() {
+  updateFirstName();
+  updateLastName();
+  updateDrug();
+}
+</script>
+</head>
+<body>
+
+First Name: <input type="text" id="firstName" value="">
+Last Name: <input type="text" id="lastName" value="">
+
+<form>
+  Medicine:
+  <select id="drugList" onchange="">
+  	<option></option>
+    <option>Tylenol</option>
+    <option>Ibuprofen</option>  
+  </select>
+</form>
+
+<p>Click the button to display the value of the value attribute of the text field.</p>
+
+<button onclick="updatePrint()">Print The Label</button>
+
+<p id="firstNamePrint">c</p>
+<p id="lastNamePrint">v</p>
+<p id="drugPrint">abcasdfgjk</p>
+
+
+
+</body>
+</html>
