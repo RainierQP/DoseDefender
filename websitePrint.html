@@ -2,6 +2,9 @@
 <html>
 <head>
 <script>
+var TylenolBG = "https://i.imgur.com/VL4kp6t.png";
+var IbuprofenBG = "https://i.imgur.com/Szo6UTp.png";
+
 function updateFirstName() {
   document.getElementById("firstNamePrint").innerHTML = document.getElementById("firstName").value;
 }
@@ -48,6 +51,20 @@ function updateExpDate(){
 	document.getElementById("expDatePrint").innerHTML = document.getElementById("expDate").value;
 }
 
+function updateBackground(){
+	switch(document.getElementById("drugList").options[document.getElementById("drugList").selectedIndex].text){
+    	case "Tylenol":
+        	document.getElementById("label-background").src=TylenolBG;
+        	break;
+        case "Ibuprofen":
+        	document.getElementById("label-background").src=IbuprofenBG;
+        	break;
+        default:
+        	
+    }
+	
+}
+
 
 function updatePrint() {
   updateFirstName();
@@ -61,6 +78,7 @@ function updatePrint() {
   updateQuantity();
   updateDoctorName();
   updateExpDate();
+  updateBackground();
 }
 </script>
 </head>
@@ -123,9 +141,8 @@ Expiration Date: <input type="text" id="expDate" value="">
 <p id="expDatePrint"></p>
 <p id="sideEffectsPrint">Side effects may include:</p>
 
-<img id="myImg" src="https://i.imgur.com/VL4kp6t.png" alt="The Pulpit Rock" width="550" height="500">
-<img id="myImg" src="https://i.imgur.com/Szo6UTp.png" alt="The Pulpit Rock" width="550" height="500">
 
+<img id="label-background" src="" width="550" height="500">
 
 
 </body>
