@@ -11,8 +11,8 @@ function updateLastName() {
 }
 
 function updateDrug() {
-  var drugList = document.getElementById("drugList");
-  document.getElementById("drugPrint").value = drugList.options[drugList.selectedIndex].text;
+  var druglist = document.getElementById("drugList");
+  document.getElementById("drugPrint").innerHTML = druglist.options[druglist.selectedIndex].text;
 }
 
 function updatePrint() {
@@ -29,8 +29,7 @@ Last Name: <input type="text" id="lastName" value="">
 
 <form>
   Medicine:
-  <select id="drugList" onchange="">
-  	<option></option>
+  <select id="drugList">
     <option>Tylenol</option>
     <option>Ibuprofen</option>  
   </select>
