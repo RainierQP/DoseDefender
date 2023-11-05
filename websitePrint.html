@@ -75,6 +75,10 @@ function updateExpDate(){
 	document.getElementById("expDatePrint").innerHTML = "Expires: " +  document.getElementById("expDate").value;
 }
 
+function updatesideEffects(){
+	document.getElementById("sideEffectsPrint").innerHTML = "Side effects: " +  document.getElementById("sideEffects").value;
+}
+
 function updateBackground(){
 	switch(document.getElementById("drugList").options[document.getElementById("drugList").selectedIndex].text){
     	case "Tylenol":
@@ -106,6 +110,7 @@ function updatePrint() {
   updateQuantity();
   updateDoctorName();
   updateExpDate();
+  updatesideEffects();
   updateBackground();
 }
 </script>
@@ -135,6 +140,7 @@ Number of days: <input type="text" id="numDays" value=""> <br>
 Quantity: <input type="text" id="quantity" value=""> <br>
 Doctor: <input type="text" id="doctorName" value=""> <br>
 Expiration Date: <input type="text" id="expDate" value=""> <br>
+Side effects: <input type="text" id="sideEffects" value=""> <br>
 
 <p></p>
 
