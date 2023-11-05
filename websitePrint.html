@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Comic Sans MS';
-  font-size: 17px;
+  font-size: 12px;
 }
 
 .container {
@@ -33,16 +33,12 @@ body {
 var TylenolBG = "https://i.imgur.com/VL4kp6t.png";
 var IbuprofenBG = "https://i.imgur.com/Szo6UTp.png";
 
-function updateFirstName() {
-  document.getElementById("firstNamePrint").innerHTML = document.getElementById("firstName").value;
-}
-
-function updateLastName() {
-  document.getElementById("lastNamePrint").innerHTML = document.getElementById("lastName").value;
+function updateName() {
+  document.getElementById("namePrint").innerHTML = document.getElementById("firstName").value + ", " +  document.getElementById("lastName").value;
 }
 
 function updateRxNumber() {
-  document.getElementById("RxNumberPrint").innerHTML = document.getElementById("RxNumber").value;
+  document.getElementById("RxNumberPrint").innerHTML = "Perscription number: " +  document.getElementById("RxNumber").value;
 }
 
 function updatePAddress() {
@@ -55,12 +51,12 @@ function updateDrug() {
 }
 
 function updateTimeBetweenDoses(){
-	document.getElementById("timeBetweenDosesPrint").innerHTML = document.getElementById("timeBetweenDoses").value;
+	document.getElementById("timeBetweenDosesPrint").innerHTML = "Take " +  document.getElementById("timeBetweenDoses").value + " pills a day for " + document.getElementById("numDays").value + " days.";
 }
 
-function updateNumDays(){
+/*function updateNumDays(){
 	document.getElementById("numDaysPrint").innerHTML = document.getElementById("numDays").value;
-}
+} */
 
 function updateMethod(){
 	var methodlist = document.getElementById("methodList");
@@ -100,13 +96,12 @@ function updateBackground(){
 
 
 function updatePrint() {
-  updateFirstName();
-  updateLastName();
+  updateName();
   updateDrug();
   updateRxNumber();
   updatePAddress();
   updateTimeBetweenDoses();
-  updateNumDays();
+  //updateNumDays();
   updateMethod();
   updateQuantity();
   updateDoctorName();
@@ -117,26 +112,19 @@ function updatePrint() {
 </head>
 <body>
 
-First Name: <input type="text" id="firstName" value="">
-<p></p>
-Last Name: <input type="text" id="lastName" value="">
-<p></p>
-Patient Address: <input type="text" id="pAddress" value="">
-<p></p>
-Perscription Number: <input type="text" id="RxNumber" value="">
-<p></p>
+First Name: <input type="text" id="firstName" value=""> <br>
+Last Name: <input type="text" id="lastName" value=""> <br>
+Patient Address: <input type="text" id="pAddress" value=""> <br>
+Perscription Number: <input type="text" id="RxNumber" value=""> <br>
 <form>
   Medicine:
   <select id="drugList">
     <option>Tylenol</option>
     <option>Ibuprofen</option>  
   </select>
-</form>
-<p></p>
-Time between doses: <input type="text" id="timeBetweenDoses" value="">
-<p></p>
-Number of days: <input type="text" id="numDays" value="">
-<p></p>
+</form> 
+#Doses per day: <input type="text" id="timeBetweenDoses" value=""> <br>
+Number of days: <input type="text" id="numDays" value=""> <br>
 <form>
   Method:
   <select id="methodList">
@@ -144,14 +132,9 @@ Number of days: <input type="text" id="numDays" value="">
     <option>With food</option>  
   </select>
 </form>
-<p></p>
-<p></p>
-Quantity: <input type="text" id="quantity" value="">
-<p></p>
-Doctor: <input type="text" id="doctorName" value="">
-<p></p>
-Expiration Date: <input type="text" id="expDate" value="">
-<p></p>
+Quantity: <input type="text" id="quantity" value=""> <br>
+Doctor: <input type="text" id="doctorName" value=""> <br>
+Expiration Date: <input type="text" id="expDate" value=""> <br>
 
 <p></p>
 
@@ -160,15 +143,14 @@ Expiration Date: <input type="text" id="expDate" value="">
 <div class="container">
   <img id="label-background" src="" width="550" height="500">
   <div class="content">
-    <p>Yeehaw Phamacy </p>
+    <h3>Yeehaw Phamacy </h3>
     <p>12345 Main Street, Dallas TX</p>
 
     <p id = "RxNumberPrint">#</p>
 
-    <p id="firstNamePrint">c</p>
-    <p id="lastNamePrint">v</p>
+    <h3 id="namePrint">c</h3>
     <p id = "pAddressPrint"></p>
-    <p id="drugPrint">abcasdfgjk</p>
+    <h3 id="drugPrint">abcasdfgjk</h3>
     <p id="timeBetweenDosesPrint"></p>
     <p id="numDaysPrint"></p>
     <p id="methodPrint"></p>
