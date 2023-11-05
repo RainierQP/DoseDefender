@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS';
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 250px;
+  max-height: 500px;
+  margin: 50 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  top: 0;
+  background: rgba(255, 255, 255, 1);
+  color: #1e1e1e;
+  width: 100%;
+  padding: 20px;
+}
+</style>
 <script>
 var TylenolBG = "https://i.imgur.com/VL4kp6t.png";
 var IbuprofenBG = "https://i.imgur.com/Szo6UTp.png";
@@ -129,26 +157,28 @@ Expiration Date: <input type="text" id="expDate" value="">
 
 <button onclick="updatePrint()">Print The Label</button>
 
-<p>Yeehaw Phamacy </p>
-<p>12345 Main Street, Dallas TX</p>
+<div class="container">
+  <img id="label-background" src="" width="550" height="500">
+  <div class="content">
+    <p>Yeehaw Phamacy </p>
+    <p>12345 Main Street, Dallas TX</p>
 
-<p id = "RxNumberPrint">#</p>
+    <p id = "RxNumberPrint">#</p>
 
-<p id="firstNamePrint">c</p>
-<p id="lastNamePrint">v</p>
-<p id = "pAddressPrint"></p>
-<p id="drugPrint">abcasdfgjk</p>
-<p id="timeBetweenDosesPrint"></p>
-<p id="numDaysPrint"></p>
-<p id="methodPrint"></p>
-<p id="quantityPrint"></p>
-<p id="doctorNamePrint"></p>
-<p id="expDatePrint"></p>
-<p id="sideEffectsPrint">Side effects may include:</p>
+    <p id="firstNamePrint">c</p>
+    <p id="lastNamePrint">v</p>
+    <p id = "pAddressPrint"></p>
+    <p id="drugPrint">abcasdfgjk</p>
+    <p id="timeBetweenDosesPrint"></p>
+    <p id="numDaysPrint"></p>
+    <p id="methodPrint"></p>
+    <p id="quantityPrint"></p>
+    <p id="doctorNamePrint"></p>
+    <p id="expDatePrint"></p>
+    <p id="sideEffectsPrint">Side effects may include:</p>
 
-
-<img id="label-background" src="" width="550" height="500">
-
+	</div>
+</div>
 
 </body>
 </html>
